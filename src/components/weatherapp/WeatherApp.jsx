@@ -13,17 +13,17 @@ import windy from "../Assets/wind.png";
 const WeatherApp = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
 
-  const searchMethod = async () => {
+  const Search = async () => {
     const elem = document.getElementsByClassName("cityInput");
-    if (elem[0].value === " ") {
+    if (elem[0].value===" ") {
       return 0;
     }
 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${elem[0].value}&units=Metric&appid=${apiKey}`;
     let response = await fetch(apiUrl);
     let data = response.json();
-    const humidity = document.getElementsByClassName("humidity-percentage");
-    const wind = document.getElementsByClassName("windspeed");
+    const humidity = document.getElementsByClassName("humidity-percent");
+    const wind = document.getElementsByClassName("wind-rate");
     const temperature = document.getElementsByClassName("weather-images");
     const location = document.getElementsByClassName("cityName");
 
@@ -36,8 +36,8 @@ const WeatherApp = () => {
     <div className="Container">
       <div className="top-bar">
         <input type="text" className="cityInput" placeholder="Search city..." />
-        <div className="search-icon">
-          <img src={search_icon} alt="" />
+        <div className="search-icon" onClick={()=>{Search()}}>
+          <img src={search_icon} alt="icon" />
         </div>
       </div>
       <div className="weather-location">France</div>
@@ -47,7 +47,7 @@ const WeatherApp = () => {
       </div>
       <div className="data-container">
         <div className="element">
-          <img src={humidityicon} alt="" />
+          <img src={humidityicon} alt="icon" />
           <div className="data">
             <div className="humidity-percent">78%</div>
             <div className="text">Humidity</div>
@@ -56,7 +56,7 @@ const WeatherApp = () => {
         <div className="element">
           <img src={windy} alt="" />
           <div className="data">
-            <div className="humidity-percent">18km/h</div>
+            <div className="wind-rate">18km/h</div>
             <div className="text">Wind Speed</div>
           </div>
         </div>
