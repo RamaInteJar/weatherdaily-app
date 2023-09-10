@@ -1,4 +1,4 @@
-.weatherContainer {
+.Container {
   width: 1200px;
   height: 700px;
   margin: auto;
@@ -8,70 +8,76 @@
   background-size: cover;
 }
 
-.searchContainer {
+.top-bar{
   display: flex;
   justify-content: center;
   gap: 14px;
   padding-top: 60px;
-  position: relative;
+  
 }
 
-.searchContainer input {
+.top-bar input {
   display: flex;
-  width: 709px;
+  width: 670px;
   height: 50px;
   border: none;
   outline: none;
-  background-color: rgba(192, 226, 43, 0.3);
+  background-color: rgba(218, 232, 157, 0.3);
   border-radius: 12px;
   text-align: center;
   font-size: 20px;
   font-weight: 400;
 }
 
-.search-icon img {
-  height: 26px;
+.search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 78, 122);
+    height: 50px;
+    width: 50px;
+    border-radius: 12px;
+}
+.search-icon img{
+  height: 30px;
+  width: 30px;
+  margin-top: 6px;
+}
+.weather-location {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.search-icon {
-  height: 49px;
-  width: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  background-color: aliceblue;
-  border-radius: 12px;
-  cursor: pointer;
-  position: absolute;
-  left: 74%;
-}
-.cityName {
   font-size: 60px;
+  font-weight: 400;
   color: aliceblue;
 }
-.weather-images img {
-  width: 90px;
 
-}
-
-.weather-images {
+.weather-image {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
   align-items: center;
-  margin: 90px auto 90px auto;
-  gap: 54px;
-  font-size: 64px;
-  color: aliceblue;
+ 
 }
-.element {
+.weather-image img{
+    width: 90px;
+}
+.weather-temp{
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 100px;
+  font-weight: 400;
+}
+
+.data-container{
+  
+}
+/* .element {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 90px;
-}
+} */
 
 .humidity-percentage {
   display: block;
@@ -79,6 +85,7 @@
   align-items: center;
   color: aliceblue;
 }
+
 
 .temperature {
   border-left: 5px white solid;
@@ -94,6 +101,7 @@
   align-items: center;
   color: aliceblue;
 }
+
 .data-container img {
   width: 60px;
   background-color: antiquewhite;
