@@ -43,7 +43,7 @@ const WeatherApp = () => {
       <div className="weather-location">{weatherData.location}</div>
       <div className="weather-temp">{weatherData.temperature}</div>
       <div className="weather-image">
-        <img src={sunrise} alt="" />
+        <img src={sunrise} alt="icon" />
       </div>
       <div className="data-container">
         <div className="element">
